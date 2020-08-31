@@ -35,7 +35,11 @@ export const reducerUtils = {
         data: prevState,
         error: null
     }),
-    //성공상태
+    success: payload => ({
+        loading: false,
+        data: payload,
+        error: null
+    }),
     error: error => ({
         loading: false,
         data: null,
