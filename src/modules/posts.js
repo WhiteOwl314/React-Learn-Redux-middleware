@@ -1,5 +1,9 @@
 import * as postsAPI from '../api/posts';
-import { createPromiseThunk, reducerUtils} from "../lib/asyncUtils";
+import {
+    createPromiseThunk,
+    reducerUtils,
+    handleAsyncActions
+} from "../lib/asyncUtils";
 
 /* 액션 타입 */
 
@@ -24,35 +28,13 @@ const initialState = {
 export default function posts(state = initialState, action) {
     switch (action.type) {
         case GET_POSTS:
-            return{
-                ...state,
-                posts: reducerUtils.loading()
-            };
         case GET_POSTS_SUCCESS:
-            return {
-                ...state,
-                posts: reducerUtils.success(action.payload)
-            };
         case GET_POSTS_ERROR:
-            return {
-                ...state,
-                posts: reducerUtils.error(action.error)
-            };
+            return handleAsyncActions(GET_POSTS, 'posts')(state, action);
         case GET_POST:
-            return {
-                ...state,
-                post: reducerUtils.loading()
-            };
         case GET_POST_SUCCESS:
-            return {
-                ...state,
-                post: reducerUtils.success(action.payload)
-            };
         case GET_POST_ERROR:
-            return {
-                ...state,
-                post: reducerUtils.error(action.error)
-            };
+            return handleAsyncActions(GET_POST, 'post')(state, action);
         default:
             return state;
     }

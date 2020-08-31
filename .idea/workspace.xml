@@ -31,8 +31,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lib/asyncUtils.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="448">
-                  <caret line="39" selection-start-line="39" selection-end-line="39" />
+                <state relative-caret-position="565">
+                  <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -44,8 +44,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/modules/posts.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="529">
-                  <caret line="58" selection-start-line="58" selection-end-line="58" />
+                <state relative-caret-position="493">
+                  <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -185,12 +185,12 @@
       <option name="presentableId" value="Default" />
       <updated>1598860853597</updated>
       <workItem from="1598860856820" duration="3821000" />
-      <workItem from="1598876812946" duration="4516000" />
+      <workItem from="1598876812946" duration="4999000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8337000" />
+    <option name="totallyTimeSpent" value="8820000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
@@ -304,15 +304,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/asyncUtils.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="565">
+          <caret line="71" column="25" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/modules/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="493">
+          <caret line="36" column="69" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
