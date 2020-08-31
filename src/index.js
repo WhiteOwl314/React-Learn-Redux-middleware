@@ -7,8 +7,14 @@ import {applyMiddleware, createStore} from "redux";
 import {Provider} from 'react-redux';
 import rootReducer from './modules';
 import logger from 'redux-logger';
+import {composeWithDevTools} from "redux-devtools-extension";
+import ReduxThunk from 'redux-thunk';
 
-const store = createStore(rootReducer, applyMiddleware(logger));
+const store = createStore(
+    rootReducer,
+    //logger 가 가장 마지막에 와야 함
+    composeWithDevTools(applyMiddleware(ReduxThunk,logger))
+);
 
 ReactDOM.render(
   <React.StrictMode>
