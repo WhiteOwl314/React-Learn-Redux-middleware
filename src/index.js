@@ -9,7 +9,7 @@ import rootReducer from './modules';
 import logger from 'redux-logger';
 import {composeWithDevTools} from "redux-devtools-extension";
 import ReduxThunk from 'redux-thunk';
-import {Route} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import {createBrowserHistory} from 'history'
 
 const customHistory = createBrowserHistory();
@@ -27,11 +27,13 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-      <Route history={customHistory}>
-          <Provider store={store}>
-              <App />
-          </Provider>
-      </Route>
+      <BrowserRouter>
+          <Route history={customHistory}>
+              <Provider store={store}>
+                  <App />
+              </Provider>
+          </Route>
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

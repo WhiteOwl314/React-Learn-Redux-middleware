@@ -42,3 +42,8 @@ export default function posts(state = initialState, action) {
     }
 
 }
+
+// 3번째 인자를 사용하면 withExtraArgument 에서 넣어준 값들을 사용할 수 있음
+export const goToHome = () => (dispatch, getState, {history}) =>{
+    history.push('/');
+};
