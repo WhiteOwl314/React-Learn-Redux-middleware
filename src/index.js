@@ -9,21 +9,29 @@ import rootReducer from './modules';
 import logger from 'redux-logger';
 import {composeWithDevTools} from "redux-devtools-extension";
 import ReduxThunk from 'redux-thunk';
-import {BrowserRouter} from 'react-router-dom';
+import {Route} from 'react-router-dom';
+import {createBrowserHistory} from 'history'
+
+const customHistory = createBrowserHistory();
 
 const store = createStore(
     rootReducer,
     //logger 가 가장 마지막에 와야 함
-    composeWithDevTools(applyMiddleware(ReduxThunk,logger))
+    composeWithDevTools(
+        applyMiddleware(
+            ReduxThunk.withExtraArgument({history:customHistory})
+            ,logger
+        )
+    )
 );
 
 ReactDOM.render(
   <React.StrictMode>
-      <BrowserRouter>
+      <Route history={customHistory}>
           <Provider store={store}>
               <App />
           </Provider>
-      </BrowserRouter>
+      </Route>
   </React.StrictMode>,
   document.getElementById('root')
 );
